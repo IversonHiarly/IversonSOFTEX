@@ -1,0 +1,40 @@
+// o Java Script, foi utilizado para reprodução de vidieo nos posts
+
+
+<script>
+      $(document).ready(function(){
+        // Target your .container, .wrapper, .post, etc.
+        $(".videopost").fitVids();
+      });
+      
+    // vine responsive http://codepen.io/chrisdrogaris/pen/KIBvJ
+      
+      //Use fitvids.js to make it responsive
+    $('body').fitVids({
+      customSelector: "iframe[src*='vine']"
+    });
+
+    //Keep track of of window resizing
+    var h = $(window).height(), w = $(window).width();
+
+    //Check when window is resizing
+    $( window ).resize(function() {
+      var window_growing = false;
+      var nh = $(window).height(), nw = $(window).width();
+      
+      //Check if window is growing when resized
+      if(nw > w){
+        window_growing = true;
+      }
+      h = nh; w = nw; // update h and w;
+      
+      //If window grows then reload iframe
+      if(window_growing){
+        $( '.vine-embed' ).attr( 'src', function ( i, val ) { return val;});
+      }
+
+    });
+
+    // for native tumblr video http://stackoverflow.com/questions/24084703/responsive-tumblr-videos-not-working
+    $('.videopost').fitVids({ customSelector: "iframe[src*='tumblr.com'], iframe[src='about:blank']" });
+</script>
