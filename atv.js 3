@@ -1,0 +1,38 @@
+<!DOCTYPEhtml >
+< html  lang =" en " >
+< cabeça >
+    < meta  charset =" UTF-8 " >
+    < meta  http-equiv =" X-UA-Compatible " content =" IE=edge " >
+    < meta  name =" janela de visualização " conteúdo =" largura=largura do dispositivo, escala inicial=1,0 " >
+    < título > Documento </ título >
+</ cabeça >
+< corpo >
+    < script >
+        deixa  casa  =  {
+            qpessoa : '4' ,
+            qbanheiro : '3' ,
+            qquarto : '3' ,
+            rua : 'chã grande'
+        } ;
+        var  bolo  =  [ "farinha" ,  "ovo" ,  "leite" , "fermento" , "margarina" ]
+        lista  =  1
+        janela . alert ( "propriedades de casa:" )
+        for  ( const  d  em  casa ) {
+
+            janela . alert ( ` ${ lista } ° ${ d } : ${ casa [ d ] } ` )
+            lista  += 1
+
+        }
+        janela . alert ( "ingredientes para fazer um bolo:" )
+        lista  =  1
+        for  ( const  e  de  bolo ) {
+
+            janela . alerta ( ` ${ lista } ° ${ e } ` )
+            lista  += 1
+
+        }
+
+
+    </ script >
+</ corpo >
+</ html >
